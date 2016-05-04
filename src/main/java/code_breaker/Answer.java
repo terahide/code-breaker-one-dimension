@@ -34,7 +34,7 @@ public class Answer {
         }
     }
     
-    public boolean match(int input) {
+    boolean match(int input) {
         validateDuplicate(input);
         
         if( value == input ){
@@ -43,7 +43,7 @@ public class Answer {
         return false;
     }
 
-    public int countSameNumber(int input) {
+    int countSameNumber(int input) {
         String s = String.valueOf(input);
         int c=0;
         for(int i=0;i<s.length();i++){
@@ -55,7 +55,7 @@ public class Answer {
         return c;
     }
 
-    public int countSamePlace(int input) {
+    int countSamePlace(int input) {
         String s = String.valueOf(input);
         int c=0;
         for(int i=0;i<s.length();i++){
