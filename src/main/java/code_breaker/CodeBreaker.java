@@ -5,5 +5,8 @@ public class CodeBreaker {
     public CodeBreaker(int answer) {
         this.answer = answer;
     }
+    public boolean match(int i) {
+        return false;
+    }
 
 }
