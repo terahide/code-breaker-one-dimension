@@ -57,4 +57,9 @@ public class CodeBreakerTest {
     public void _123を予想したなら同じ数字が2であるべき() {
         assertThat(answer102.countSameNumber(123),is(2));
     }
+    @Test
+    public void _102を予想したなら同じ場所が3であるべき() {
+        assertThat(answer102.countSamePlace(102),is(3));
+    }
+
 }

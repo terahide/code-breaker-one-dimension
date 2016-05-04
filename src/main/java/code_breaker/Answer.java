@@ -54,4 +54,8 @@ public class Answer {
 
         return c;
     }
+
+    public int countSamePlace(int i) {
+        return 0;
+    }
 }
