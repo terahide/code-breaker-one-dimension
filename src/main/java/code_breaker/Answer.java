@@ -56,6 +56,9 @@ public class Answer {
     }
 
     public int countSamePlace(int i) {
-        return 3;
+        if(i == value){
+            return 3;
+        }
+        return 0;
     }
 }
