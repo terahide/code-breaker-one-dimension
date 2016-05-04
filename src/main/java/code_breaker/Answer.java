@@ -7,11 +7,11 @@ import java.util.Set;
 
 public class Answer {
     final int value;
-    final List<Character> l;
+    final List<Character> charcters;
     public Answer(int value) {
         validateDuplicate(value);
         this.value = value;
-        this.l = toList(value);
+        this.charcters = toList(value);
     }
     
     private List<Character> toList(int value){
@@ -47,7 +47,7 @@ public class Answer {
         String s = String.valueOf(input);
         int c=0;
         for(int i=0;i<s.length();i++){
-            if( l.contains(s.charAt(i)) ){
+            if( charcters.contains(s.charAt(i)) ){
                 c++;
             }
         }
