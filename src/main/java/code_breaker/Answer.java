@@ -6,10 +6,21 @@ import java.util.List;
 import java.util.Set;
 
 public class Answer {
-    final int value; 
+    final int value;
+    final List<Character> l;
     public Answer(int value) {
         validateDuplicate(value);
         this.value = value;
+        this.l = toList(value);
+    }
+    
+    private List<Character> toList(int value){
+        String s = String.valueOf(value);
+        List<Character> l = new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            l.add(s.charAt(i));
+        }
+        return l;
     }
     
     private void validateDuplicate(int value) {
@@ -33,12 +44,7 @@ public class Answer {
     }
 
     public int countSameNumber(int input) {
-        String s = String.valueOf(value);
-        List<Character> l = new ArrayList<>();
-        for(int i=0;i<s.length();i++){
-            l.add(s.charAt(i));
-        }
-        s = String.valueOf(input);
+        String s = String.valueOf(input);
         int c=0;
         for(int i=0;i<s.length();i++){
             if( l.contains(s.charAt(i)) ){
