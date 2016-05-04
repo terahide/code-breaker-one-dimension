@@ -69,4 +69,9 @@ public class CodeBreakerTest {
         assertThat(answer102.countSamePlace(765),is(0));
     }
 
+    @Test
+    public void _193を予想したなら同じ場所が1であるべき() {
+        assertThat(answer102.countSamePlace(193),is(1));
+    }
+
 }
