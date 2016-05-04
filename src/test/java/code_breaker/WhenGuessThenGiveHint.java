@@ -41,10 +41,10 @@ public class WhenGuessThenGiveHint {
     public static class ExpectedHolder{
         final int input;
         final Hint hint;
-        public ExpectedHolder(int input, boolean matched, int sameNumberCount, int samePlaceCount) {
+        public ExpectedHolder(int input, boolean matched, int samePlaceCount, int sameNumberCount ) {
             super();
             this.input = input;
-            this.hint = new Hint(matched, sameNumberCount, samePlaceCount);
+            this.hint = new Hint(matched, samePlaceCount, sameNumberCount);
         }
     }
 }

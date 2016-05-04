@@ -70,8 +70,8 @@ public class Answer {
     public Hint guess(int input) {
         return new Hint(
             match(input),
-            countSameNumber(input),
-            countSamePlace(input)
+            countSamePlace(input),
+            countSameNumber(input)
         );
     }
 }
