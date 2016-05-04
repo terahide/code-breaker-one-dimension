@@ -49,4 +49,8 @@ public class CodeBreakerTest {
         assertThat(answer102.countSameNumber(102),is(3));
     }
 
+    @Test
+    public void _765を予想したなら同じ数字が0であるべき() {
+        assertThat(answer102.countSameNumber(765),is(0));
+    }
 }
