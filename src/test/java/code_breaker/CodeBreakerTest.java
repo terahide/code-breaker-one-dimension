@@ -44,4 +44,9 @@ public class CodeBreakerTest {
         answer102.match(112);
     }
 
+    @Test
+    public void _102を予想したなら同じ数字が3であるべき() {
+        assertThat(answer102.countSameNumber(102),is(3));
+    }
+
 }

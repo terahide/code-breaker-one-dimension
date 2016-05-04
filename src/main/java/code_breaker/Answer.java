@@ -29,4 +29,8 @@ public class Answer {
         }
         return false;
     }
+
+    public int countSameNumber(int i) {
+        return 0;
+    }
 }
