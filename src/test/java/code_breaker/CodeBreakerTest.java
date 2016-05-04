@@ -37,4 +37,11 @@ public class CodeBreakerTest {
         new Answer(112);
     }
 
+    @Test
+    public void _112を予想したなら例外を発生すべき() {
+        expectedException.expect(IllegalStateException.class);
+        
+        answer102.match(112);
+    }
+
 }
