@@ -66,4 +66,8 @@ public class Answer {
         }
         return c;
     }
+
+    public Hint guess(int i) {
+        return new Hint(false, 0, 0);
+    }
 }
