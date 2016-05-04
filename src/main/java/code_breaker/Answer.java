@@ -55,10 +55,15 @@ public class Answer {
         return c;
     }
 
-    public int countSamePlace(int i) {
-        if(i == value){
-            return 3;
+    public int countSamePlace(int input) {
+        String s = String.valueOf(input);
+        int c=0;
+        for(int i=0;i<s.length();i++){
+            char charAtAsAnswer = charcters.get(i);
+            if( (s.charAt(i) == charAtAsAnswer) ){
+                c++;
+            }
         }
-        return 0;
+        return c;
     }
 }
