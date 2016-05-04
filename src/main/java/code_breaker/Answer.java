@@ -1,6 +1,8 @@
 package code_breaker;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Answer {
@@ -30,7 +32,20 @@ public class Answer {
         return false;
     }
 
-    public int countSameNumber(int i) {
-        return 3;
+    public int countSameNumber(int input) {
+        String s = String.valueOf(value);
+        List<Character> l = new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            l.add(s.charAt(i));
+        }
+        s = String.valueOf(input);
+        int c=0;
+        for(int i=0;i<s.length();i++){
+            if( l.contains(s.charAt(i)) ){
+                c++;
+            }
+        }
+
+        return c;
     }
 }
