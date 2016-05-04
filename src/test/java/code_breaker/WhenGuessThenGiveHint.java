@@ -20,28 +20,31 @@ public class WhenGuessThenGiveHint {
     }
 
     @Theory
-    public void test(int input,Hint expected) {
-        Hint actual = answer102.guess(input);
+    public void test(ExpectedHolder expectedHolder) {
+        Hint expected = expectedHolder.hint;
+        Hint actual = answer102.guess(expectedHolder.input);
+
         assertThat(actual.matched ,is(expected.matched));
         assertThat(actual.sameNumberCount ,is(expected.sameNumberCount));
         assertThat(actual.samePlaceCount ,is(expected.samePlaceCount));
     }
     
     @DataPoints
-    public final static int[] inputs = {
-        102,
-//        765,
-//        351,
-//        193,
-//        123,
+    public final static ExpectedHolder[] inputs = {
+        new ExpectedHolder(102,true,3,3),
+//        new ExpectedHolder(765,false,0,0),
+//        new ExpectedHolder(351,false,0,1),
+//        new ExpectedHolder(193,false,1,1),
+//        new ExpectedHolder(123,false,1,2),
     };
 
-    @DataPoints
-    public final static Hint[] expecteds = {
-        new Hint(true,3,3),
-//        new Hint(false,0,0),
-//        new Hint(false,0,1),
-//        new Hint(false,1,1),
-//        new Hint(false,1,2),
-    };
+    public static class ExpectedHolder{
+        final int input;
+        final Hint hint;
+        public ExpectedHolder(int input, boolean matched, int sameNumberCount, int samePlaceCount) {
+            super();
+            this.input = input;
+            this.hint = new Hint(matched, sameNumberCount, samePlaceCount);
+        }
+    }
 }
