@@ -4,11 +4,16 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class CodeBreakerTest {
     
     Answer sut;
+    
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
     
     @Before
     public void setup(){
@@ -23,6 +28,13 @@ public class CodeBreakerTest {
     @Test
     public void _765を予想したなら完全一致でないべき() {
         assertThat(sut.match(765),is(false));
+    }
+
+    @Test
+    public void 答えが112ならば例外を発生すべき() {
+        expectedException.expect(IllegalStateException.class);
+        
+        new Answer(112);
     }
 
 }
