@@ -6,7 +6,9 @@ public class Answer {
         this.value = value;
     }
     public boolean match(int i) {
-        return true;
+        if( value == i ){
+            return true;
+        }
+        return false;
     }
-
 }
