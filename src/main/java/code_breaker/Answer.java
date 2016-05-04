@@ -22,6 +22,8 @@ public class Answer {
     }
     
     public boolean match(int input) {
+        validateDuplicate(input);
+        
         if( value == input ){
             return true;
         }
