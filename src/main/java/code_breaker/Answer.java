@@ -67,7 +67,11 @@ public class Answer {
         return c;
     }
 
-    public Hint guess(int i) {
-        return new Hint(true, 3, 3);
+    public Hint guess(int input) {
+        return new Hint(
+            match(input),
+            countSameNumber(input),
+            countSamePlace(input)
+        );
     }
 }
