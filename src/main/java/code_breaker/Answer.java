@@ -5,8 +5,8 @@ public class Answer {
     public Answer(int value) {
         this.value = value;
     }
-    public boolean match(int i) {
-        if( value == i ){
+    public boolean match(int input) {
+        if( value == input ){
             return true;
         }
         return false;
