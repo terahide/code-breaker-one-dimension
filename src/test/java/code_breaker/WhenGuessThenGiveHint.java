@@ -32,7 +32,7 @@ public class WhenGuessThenGiveHint {
     @DataPoints
     public final static ExpectedHolder[] inputs = {
         new ExpectedHolder(102,true,3,3),
-//        new ExpectedHolder(765,false,0,0),
+        new ExpectedHolder(765,false,0,0),
 //        new ExpectedHolder(351,false,0,1),
 //        new ExpectedHolder(193,false,1,1),
 //        new ExpectedHolder(123,false,1,2),
