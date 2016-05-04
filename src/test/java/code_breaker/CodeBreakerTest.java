@@ -53,13 +53,20 @@ public class CodeBreakerTest {
     public void _765を予想したなら同じ数字が0であるべき() {
         assertThat(answer102.countSameNumber(765),is(0));
     }
+
     @Test
     public void _123を予想したなら同じ数字が2であるべき() {
         assertThat(answer102.countSameNumber(123),is(2));
     }
+
     @Test
     public void _102を予想したなら同じ場所が3であるべき() {
         assertThat(answer102.countSamePlace(102),is(3));
+    }
+
+    @Test
+    public void _765を予想したなら同じ場所が0であるべき() {
+        assertThat(answer102.countSamePlace(765),is(0));
     }
 
 }
