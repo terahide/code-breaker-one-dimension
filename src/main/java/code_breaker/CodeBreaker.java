@@ -6,7 +6,7 @@ public class CodeBreaker {
         this.answer = answer;
     }
     public boolean match(int i) {
-        return false;
+        return true;
     }
 
 }
