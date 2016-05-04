@@ -10,24 +10,24 @@ import org.junit.rules.ExpectedException;
 
 public class CodeBreakerTest {
     
-    Answer sut;
+    Answer answer102;
     
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
     
     @Before
     public void setup(){
-        sut = new Answer(102);
+        answer102 = new Answer(102);
     }
 
     @Test
     public void _102を予想したなら完全一致であるべき() {
-        assertThat(sut.match(102),is(true));
+        assertThat(answer102.match(102),is(true));
     }
 
     @Test
     public void _765を予想したなら完全一致でないべき() {
-        assertThat(sut.match(765),is(false));
+        assertThat(answer102.match(765),is(false));
     }
 
     @Test
