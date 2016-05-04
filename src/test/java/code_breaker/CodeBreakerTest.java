@@ -16,12 +16,13 @@ public class CodeBreakerTest {
     }
 
     @Test
-    public void 答えが102の時に102を予想したなら完全一致であるべき() {
+    public void _102を予想したなら完全一致であるべき() {
         assertThat(sut.match(102),is(true));
     }
 
     @Test
-    public void 答えが102の時に765を予想したなら完全一致でないべき() {
+    public void _765を予想したなら完全一致でないべき() {
         assertThat(sut.match(765),is(false));
     }
+
 }
