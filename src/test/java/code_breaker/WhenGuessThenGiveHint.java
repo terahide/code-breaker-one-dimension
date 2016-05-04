@@ -30,18 +30,18 @@ public class WhenGuessThenGiveHint {
     @DataPoints
     public final static int[] inputs = {
         102,
-        765,
-        351,
-        193,
-        123,
+//        765,
+//        351,
+//        193,
+//        123,
     };
 
     @DataPoints
     public final static Hint[] expecteds = {
         new Hint(true,3,3),
-        new Hint(false,0,0),
-        new Hint(false,0,1),
-        new Hint(false,1,1),
-        new Hint(false,1,2),
+//        new Hint(false,0,0),
+//        new Hint(false,0,1),
+//        new Hint(false,1,1),
+//        new Hint(false,1,2),
     };
 }
